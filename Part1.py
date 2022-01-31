@@ -22,16 +22,20 @@ print(capitalized_words)
 
 
 group_of_letters = input('Smash your keyboard so you get a bunch of random letters. ')
-letter_list = []
-letter_count= []
+letter_list = ""
+count = 1
 
-for letter in group_of_letters:
-    letter_list.append(letter)
-    
+for letter in range(len(group_of_letters)-1): 
+    if group_of_letters[letter] == group_of_letters[letter+1]: # Counting for duplicate letters
+        count = count + 1
+    else:
+        letter_list = letter_list + str(count) + group_of_letters[letter] #Accounting for non-repeating letters
+        count = 1
 
+letter_list = letter_list + str(count) + group_of_letters[letter+1]
 
 print(letter_list)
-print(letter_count)
+
 
 
 # Problem 4 - Palindromes...
