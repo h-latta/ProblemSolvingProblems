@@ -22,19 +22,19 @@ def numbers(next_step):
 
 
 def final_check(final_sum):
-    if final_sum != 1:
+    if final_sum == 1:
+        print("Your number is a happy number!")
+    elif final_sum == happy_number:
+        print("Your number is not a happy number.")
+    elif final_sum == final_sum:
+        print('Your number is not a happy number.')
+    elif final_sum != 1:
         broken_integer = []
         next_step.clear()
         first_mode(final_sum)
         second_mode(broken_integer)
         final_sum = numbers(next_step)
         final_check(final_sum)
-    elif final_sum == 1:
-        print("Your number is a happy number!")
-    elif final_sum == happy_number:
-        print("Your number is not a happy number.")
-    elif final_sum == final_sum:
-        print('Your number is not a happy number.')
 
 broken_integer = []
 next_step = []
@@ -60,3 +60,17 @@ initial_number()
 
 
 # Problem #3 - Fibonacci Sequence
+
+
+def fibonacci(user_num):
+    number_one = 0
+    number_two = 1
+    added_result = 0
+
+    for number in range(user_num, 10):
+        number_one = number_two
+        number_two = added_result
+        added_result = number_one + number_two
+
+user_num = input("What number do you wanna start at? ")
+fibonacci(user_num)
