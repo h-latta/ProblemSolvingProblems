@@ -23,7 +23,20 @@ else:
 
 #Problem #4 - Positive Sum, Negative Sum
 
+list_of_numbers =  [7, 9, -3, -32, 107, -1, 36, 95, -14, -99, 21]
 
+def number_sort(list_of_numbers):
+    positive_sum = 0
+    negative_sum = 0
+    for number in list_of_numbers:
+        if number > 0:
+            positive_sum += number
+        elif number < 0:
+            negative_sum += number
+    print(positive_sum)
+    print(negative_sum)
+
+number_sort(list_of_numbers)
 
 #Problem #5 - High and Low Numbers
 
