@@ -66,11 +66,11 @@ def fibonacci(user_num):
     number_one = 0
     number_two = 1
     added_result = 0
-
-    for number in range(user_num, 10):
+    for number in range(user_num):
+        print(added_result)
         number_one = number_two
         number_two = added_result
         added_result = number_one + number_two
 
-user_num = input("What number do you wanna start at? ")
+user_num = int(input("How many sequences would you like to iterate? "))
 fibonacci(user_num)
